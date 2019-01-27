@@ -58,7 +58,7 @@ export class SearchpageComponent implements OnInit {
     this.owner.Name = name;
     this.owner.Url = url;
     url = "http://localhost:49528/api/Home";
-    const retVal = this.http.post(url, this.owner).subscribe(data => { this.retPostData = data; });
+    const retVal = this.http.post(url, this.owner, { withCredentials: true }).subscribe(data => { this.retPostData = data; });
 
     //const retVal = this.http.post(url, this.owner, { withCredentials: true }).subscribe(data => { this.retPostData = data; });
 
